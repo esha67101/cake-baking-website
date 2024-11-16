@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Header section styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #663300; /* Heading color */;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #080808;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Cake gallery section styling */
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #663300
+}
+
+.cake-gallery {
+    display: flex;
+    justify-content: space-around; /* Equal spacing between items */
+    flex-wrap: wrap; /* Wrap items to the next line on smaller screens */
+    gap: 20px; /* Add space between items */
+}
+
+.cake-item {
+    flex: 1 1 30%; /* Each item takes 30% of the row */
+    max-width: 20%; /* Prevents items from exceeding 30% width */
+    text-align: center;
+    margin: 10px; /* Space around each item */
+}
+
+.cake-item img {
+    width: 100%; /* Images take full width of their container */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for better design */
+}
+
+
+.cake-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #080808;
+}
+/* Target the <a> tag that wraps both the image and the <p> (caption) */
+.cake-item a {
+    text-decoration: none !important; /* Force no underline */
+    color: inherit; /* Ensure it keeps the default color */
+}
+
+/* Target the <p> inside the <a> to ensure the text doesn't get underlined */
+.cake-item a p {
+    text-decoration: none !important; /* Force no underline on the caption */
+    color: inherit; /* Keep default text color */
+    margin: 0; /* Optional: Tweak margin if needed */
+}
+
+/* Ensure no underline even on hover */
+.cake-item a:hover p {
+    text-decoration: none !important;
+}
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .cake-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cake-item {
+        max-width: 80%;
+    }
+}
+.pancakes-section {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.pancakes-section h2 {
+    font-size: 2.5rem;
+    color:#663300 ; /* Heading color */
+    margin-bottom: 20px;
+}
+
+.pancakes-section p {
+    font-size: 1.2rem;
+    color:#080808; /* Paragraph color */
+    margin-bottom: 40px;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.double-line {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #663300, transparent);
+    margin: 40px auto;
+    width: 60%;
+}
+
+.pancake-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+.pancake-image {
+    width: 20%;
+    margin: 0 10x;
+    text-align: center;
+    
+}
+
+.pancake-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.pancake-image p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color:#080808;
+}
+/* Target the <a> tag that wraps both the image and the <p> (caption) */
+.pancake-image a {
+    text-decoration: none !important; /* Force no underline */
+    color: inherit; /* Ensure it keeps the default color */
+}
+
+/* Target the <p> inside the <a> to ensure the text doesn't get underlined */
+.pancake-image p {
+    text-decoration: none !important; /* Force no underline on the caption */
+    color: inherit; /* Keep default text color */
+    margin: 0; /* Optional: Tweak margin if needed */
+}
+
+/* Ensure no underline even on hover */
+.pancake-image a:hover p {
+    text-decoration: none !important;
+}
+@media (max-width: 768px) {
+    .pancake-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.cupcakes-section {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cupcakes-section h2 {
+    font-size: 2.5rem;
+    color:#663300 ; /* Heading color */
+    margin-bottom: 20px;
+}
+
+.cupcakes-section p {
+    font-size: 1.2rem;
+    color:#080808; /* Paragraph color */
+    margin-bottom: 40px;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.double-line {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #663300, transparent);
+    margin: 40px auto;
+    width: 60%;
+}
+
+.cupcake-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cupcake-image {
+    width: 30%;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.cupcake-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cupcake-image p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color:#080808;
+}
+
+@media (max-width: 768px) {
+    .cupcake-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.milk-cake-recipes {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.milk-cake-recipes h2 {
+    font-size: 2.5rem;
+    color: #663300; /* Heading color */
+    margin-bottom: 40px;
+}
+
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+.recipe-card h3 {
+    font-size: 1rem;
+    color:#080808;
+    margin-bottom: 15px;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    color:#080808;
+    margin-bottom: 15px;
+}
+
+.recipe-card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.8rem;
+    color:#080808;
+}
+
+.recipe-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.recipe-card ul li::before {
+    content: '\2022'; /* Bullet point */
+    color: #663300; /* Bullet color */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .recipe-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,156 @@
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+     color: #663300;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #080808;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cookie gallery styling */
+.cookie-gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.cookie-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cookie-item {
+    margin: 15px;
+    text-align: center;
+}
+
+.cookie-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cookie-item p {
+    margin-top: 10px;
+    color: #080808;
+    text-decoration: none;
+}
+
+.cookie-item a {
+    text-decoration: none;
+}
+
+/* Double line separator */
+.double-line {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #663300, transparent);
+    margin: 40px auto;
+    width: 60%;
+}
+.cookies-recipes {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cookies-recipes h2 {
+    font-size: 2.5rem;
+    color: #663300; /* Heading color */
+    margin-bottom: 40px;
+}
+/* Recipe cards styling */
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+.recipe-card h3 {
+    font-size: 1rem;
+    color:#080808;
+    margin-bottom: 15px;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    color:#080808;
+    margin-bottom: 15px;
+}
+
+.recipe-card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.8rem;
+    color:#080808;
+}
+
+.recipe-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.recipe-card ul li::before {
+    content: '\2022'; /* Bullet point */
+    color: #663300; /* Bullet color */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+@media (max-width: 768px) {
+    .cookie-gallery,
+    .recipe-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cookie-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .recipe-card {
+        width: 100%;
+    }
+}
