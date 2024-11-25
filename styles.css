@@ -1,0 +1,538 @@
+
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 40px 60px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the dropdown below the "Cakes" button */
+    left: 0;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color:  #f0f0f0;
+}
+
+/* Show the dropdown on click */
+.dropdown-content.show {
+    display: block;
+}
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+}
+/* Align the dropdown icon next to the text */
+ .dropdown-icon {
+    margin-left: 8px;
+    display: inline-block;
+}
+.navbar-links ul li a {
+    display: flex;
+    align-items: center;
+}
+/* Responsive adjustments */
+.toggle-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-links ul {
+        display: none;
+    }
+
+    .navbar-links.active ul {
+        display: block;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+
+    /* Fix overlap */
+    .dropdown-content a {
+        padding: 10px;
+    }
+}
+.brand-title {
+    font-size: 1.5rem;
+    color: #7a420a;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links  ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #7a420a;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #cc3300;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #7a420a;
+    outline: none;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    right: 10px; /* Space between input and icon */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #7a420a; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        flex-grow: 1;
+        width: 85%;
+    }
+
+    .search-bar .search-icon {
+        font-size: 1.8rem; /* Adjust icon size for smaller screens */
+    }
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #7a420a;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
+    
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .search-bar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        flex-grow: 1;
+        width: 80%;
+    }
+
+    .search-bar button {
+        width: 18%;
+    }
+}
+.cake-delight-section {
+    background-color: #f8c8dc; /* Pastel pink background color */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative; /* Ensure positioning for absolute children */
+    overflow: hidden; /* Hide any overflow from the image */
+    background-image: url('images/main-image.png'); /* Set your image here */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.cake-delight-section h2 {
+    font-size: 2.5rem;
+    color: #643506; /* Text color */
+    margin-bottom: 20px;
+}
+
+/* Image styling */
+.cake-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px; /* Rounded corners for a soft look */
+    box-shadow: 0 4px 8px rgba(192, 190, 190, 0.3); /* Adds a shadow for depth */
+    margin-top: 20px; /* Adds spacing above the image */
+}
+
+/* Optional background overlay */
+.cake-delight-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(116, 115, 115, 0.3); /* Light pink overlay */
+    z-index: 1; /* Ensure overlay is below content */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .cake-delight-section {
+        padding: 80px 40px;
+    }
+
+    .cake-delight-section h2 {
+        font-size: 3rem;
+    }
+
+    .cake-image {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cake-delight-section {
+        padding: 80px 40px;
+    }
+
+    .cake-delight-section h2 {
+        font-size: 4rem;
+    }
+
+    .cake-image {
+        max-width: 600px;
+    }
+}
+/* Craving Section Styling */
+.craving-section {
+    background-color: #f0f0f0;
+    padding: 60px 20px; /* Same padding as category section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto; /* Auto height for content to adjust naturally */
+}
+
+.content-wrapper {
+    max-width: 1200px; /* Same max-width as category section */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width for responsiveness */
+}
+
+.craving-section h2 {
+    font-size: 2.5rem;
+    color: #663300; /* Same color as other sections */
+    margin-bottom: 20px;
+    
+}
+
+.craving-section p {
+    font-size: 1.2rem;
+    color: rgb(8, 8, 8);
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .craving-section {
+        padding: 60px 40px; /* Adjust padding for larger screens */
+    }
+
+    .craving-section h2 {
+        font-size: 3rem;
+    }
+
+    .craving-section p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .craving-section {
+        padding: 80px 40px; /* Padding same as category section */
+    }
+
+    .craving-section h2 {
+        font-size: 3.5rem;
+    }
+
+    .craving-section p {
+        font-size: 1.7rem;
+    }
+}
+/* Section Styles */
+.category-section {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-box {
+    width: 100%;
+    max-width: 280px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category-box:hover {
+    transform: scale(1.05);
+}
+
+.category-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.category-box h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #663300;
+}
+/* Target the <a> tag that wraps both the image and the <p> (caption) */
+.category-box a {
+    text-decoration: none !important; /* Force no underline */
+    color: inherit; /* Ensure it keeps the default color */
+}
+
+/* Target the <p> inside the <a> to ensure the text doesn't get underlined */
+.category-box p {
+    text-decoration: none !important; /* Force no underline on the caption */
+    color: inherit; /* Keep default text color */
+    margin: 0; /* Optional: Tweak margin if needed */
+}
+
+/* Ensure no underline even on hover */
+.category-box a:hover p {
+    text-decoration: none !important;
+}
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .category-box {
+        width: calc(25% - 40px); /* 4 boxes in one row on tablet and above */
+    }
+}
+/* Footer Styling */
+.footer {
+    background-color: #884604;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f8c8dc; /* Pastel pink for headings */
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f8c8dc;
+}
+
+.footer-section .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section .social-icons a:hover {
+    color: #f8c8dc;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 1rem;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        margin-bottom: 0;
+        flex: 1;
+        padding: 0 20px;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .logo img {
+        width: 50px; /* Adjust size as needed */
+        height: auto;
+        display: inline-block;
+        margin-right: 10px; /* Spacing between logo and text */
+    }
+    
+    .brand-title {
+        font-size: 1.5rem;
+        color: #7a420a;
+        margin-left: 10px;
+        display: inline-block;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f0f0f0;
+        padding: 20px 40px;
+    }
+    
+    }
+    
+    @media (max-width: 768px) {
+        .logo img {
+            width: 40px; /* Smaller logo for mobile */
+        }
+    
+        .brand-title {
+            font-size: 1.2rem; /* Adjusted text size for mobile */
+        }
+    }
+    
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}

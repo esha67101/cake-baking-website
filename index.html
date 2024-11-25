@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Baking Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Standard Favicon -->
+<link rel="icon" href="favicon_io" type="image/x-icon">
+
+<!-- For High-Resolution Screens -->
+<link rel="icon" href="favicon_io/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon_io/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<!-- Apple Touch Icon for iOS -->
+<link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="favicon_io/site.webmanifest">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo1-removebg-preview.png" alt="Cake Baking Logo">
+            </a>
+            <div class="brand-title">Welcome to Cake Baking Recipes</div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                    <a href="cakes.html" >Cakes <span class="dropdown-btn">&#9660;</span> </a>
+                        <div class="dropdown-content">
+                            <a href="cakes.html#cupcakes-section">Cupcakes</a>
+                            <a href="cakes.html#pancakes-section">Pancakes</a>
+                        </div>
+                    </li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <head>
+                        <!-- Font Awesome CDN -->
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                    </head>
+                    <li class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button id="searchButton" class="search-icon" type="button">
+                            <i class="fas fa-search"></i> <!-- Search icon -->
+                        </button>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+   
+    <section class="cake-delight-section">
+        <div class="content-wrapper">
+            <h2>Cake Delight-</h2>
+            <p>Made with love</p>
+            
+        </div>
+    </section>     
+    <section id="home" class="section">
+    <section class="craving-section">
+        <div class="content-wrapper">
+            <h2>Are you Craving? Do you Wanna Bake Something?</h2>
+            <p>
+                Indulge in the joy of baking and create sweet memories with every bite. 
+                Whether it's cakes, cookies, or cupcakes, every recipe here is made with love, 
+                ready to fill your home with warmth and deliciousness.
+            </p>
+        </div>
+    </section>
+</section>
+    <section class="category-section">
+        <div class="category-wrapper">
+            <div class="category-box">
+                <a href="cakes.html" class="category-box">
+                <div class="category-image" style="background-image: url('images/cakes.jpeg');"></div>
+                <h3>Cakes</h3>
+                </a>
+            </div>
+            <div class="category-box">
+                <a href="cakes.html#pancakes-section" class="category-box">
+                <div class="category-image" style="background-image: url('images/pancake.jpeg');"></div>
+                <h3>Pancakes</h3>
+                </a>
+            </div>
+            <div class="category-box">
+                <a href="cakes.html#cupcakes-section" class="category-box">
+                <div class="category-image" style="background-image: url('images/cupcakes.jpeg');"></div>
+                <h3>Cupcakes</h3>
+                </a>
+            </div>
+            <div class="category-box">
+                <a href="cookies.html" class="category-box">
+                <div class="category-image" style="background-image: url('images/cookies.jpeg');"></div>
+                <h3>Cookies</h3>
+                </a>
+            </div>
+        </div>
+    </section>      
+   
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>
+                    Welcome to Cake Delight, your one-stop destination for all things delicious. From cakes to cookies, we bring you recipes that will satisfy your sweet cravings.
+                </p>
+            </div>
+    
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="footer-bottom">
+                &copy; 2024 Cake Delight | All Rights Reserved
+        </div>     
+    </footer  >                                                                 
+    <script src="script.js"></script>
+</body>
+</html>
